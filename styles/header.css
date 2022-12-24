@@ -1,0 +1,167 @@
+header {
+    border-bottom: 1px solid #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container a {
+    font-size: 2.2rem;
+    letter-spacing: .1rem;
+    z-index: 1;
+    display: block;
+    position: relative;
+}
+
+.logo-container a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 60%;
+    height: .4rem;
+    background-color: #303030;
+    transition: all .25s ease-in-out;
+}
+.logo-container a:hover::after {
+    width: 90%;
+}
+
+.header-select {
+    width: max-content;
+    font-size: 1.4rem;
+    font-weight: 200;
+    transition: all .25s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+    z-index: 1;
+}
+
+.header-select:hover {
+    background-color: transparent;
+}
+
+.cta {
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.searh-form-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 1rem;
+    transition: all .25s ease-in-out;
+    z-index: 0;
+    opacity: 0;
+}
+.searh-form-container.active {
+    opacity: 1;
+    z-index: 2;
+}
+.searh-form-container > button {
+    width: 4rem;
+    height: 3.6rem;
+}
+.searh-form-container button svg {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.input-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.input-search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.input-search-container span {
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+.input-search-container input {
+    padding: .7rem 4rem;
+    width: 100%;
+    height: 90%;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+.input-search-container input:focus {
+    box-shadow: var(--box-shadow);
+
+}
+.input-search-container input::placeholder {
+    color: #656363;
+    letter-spacing: .1rem;
+    font-style: italic;
+}
+
+.input-search-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+opacity: 0;
+transition: all .25s ease-in-out;
+
+}
+.input-search-container button.active {
+opacity: 1;
+}
+
+.input-search-container button svg {
+    font-size: 1.8rem;
+    color: #ccc;
+
+}
+
+.input-search-result-container {
+    background-color: #fff;
+    max-height: 80vh;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    position: absolute;
+    padding: .5rem;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+.input-search-result-container::-webkit-scrollbar {
+   /* width: 1rem; */
+    }
+.input-search-result-container p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}

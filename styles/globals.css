@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+:root {
+  --sub--text: #767676;
+  --primary--text: #fff;
+  --secondary--text: #515151;
+  --bg-blue: #2ea2cc;
+  --bg-red: #e92f2f;
+  --border-radius: .5rem;
+
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --letter-spacing-1: .1rem;
+  --letter-spacing-2: .2rem;
+}
+
 html,
 body {
+  font-size: 62.5%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
 }
 
 a {
@@ -11,16 +28,25 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: inherit;
+}
+
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.layout {
+  min-height: 100vh;
 }
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent
+}
+
+@import url('./header.css');
+@import url('./brand.css');
+@import url('./cart.css');
+@import url('./footer.css');
